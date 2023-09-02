@@ -15,7 +15,6 @@ const deleteArtRouter=require('./routes/deleteArtRouter');
 const deleteUsuRouter=require('./routes/deleteUsuRouter');
 
 const server=express();
-// const CONNECT_STRING='mongodb+srv://DBA:Super@tienda.nqy5x5a.mongodb.net/'
 server.use(express.json())
 
 const MONGOD_URI = process.env.CONNECT_STRING
