@@ -1,0 +1,172 @@
+/* TIPOS DE FUENTES DEL SITIO WEB */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+/* INICIO DISEÑO DEL HOME */
+.bodyHome {
+  overflow: hidden;
+  height: 100vh;
+  background-image: linear-gradient(
+    to left,
+    #7cdfec,
+    #8ad6e3,
+    #deb7e9,
+    #dcccf3,
+    #e0def7,
+    #e6e5f7,
+    #ecebf6,
+    #f2f2f6,
+    #f2f1f6,
+    #f3eff6,
+    #f5eef5,
+    #f7ecf3
+  );
+}
+.infoHome {
+  width: 533px;
+  height: 350px;
+  font-family: "Montserrat", sans-serif;
+}
+.imgHome {
+  width: 530px;
+  height: 300px;
+}
+.txtHome {
+  font-size: 25px;
+  font-family: "Satisfy", cursive;
+}
+/* FIN DEL DISEÑO DEL HOME */
+/* INICIO DISEÑO DE FONDO PAGINAS DEL SITIO WEB */
+.bodyPage {
+  background-image: linear-gradient(
+    to left,
+    #7cdfec,
+    #8ad6e3,
+    #deb7e9,
+    #dcccf3,
+    #e0def7,
+    #e6e5f7,
+    #ecebf6,
+    #f2f2f6,
+    #f2f1f6,
+    #f3eff6,
+    #f5eef5,
+    #f7ecf3
+  );
+}
+/* FIN DISEÑO DE FONDO PAGINAS DEL SITIO WEB */
+/* INICIO DISEÑO DEL HEADER */
+header {
+  border-top: 2px solid rgb(28, 177, 170);
+  border-bottom: 2px solid rgb(28, 177, 170);
+  background-image: linear-gradient(
+    to left,
+    #7cdfec,
+    #8ad6e3,
+    #deb7e9,
+    #dcccf3,
+    #e0def7,
+    #e6e5f7,
+    #ecebf6,
+    #f2f2f6,
+    #f2f1f6,
+    #f3eff6,
+    #f5eef5,
+    #f7ecf3
+  );
+}
+.logoHeader {
+  width: 200px;
+  height: 100px;
+}
+h1 {
+  font-size: 30px;
+  font-family: "Satisfy", cursive;
+  color: #e72fa0;
+}
+/* FIN DISEÑO DEL HEADER */
+/* INICIO DISEÑO DEL FOOTER */
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  border-top: 2px solid rgb(28, 177, 170);
+}
+.txtFooter {
+  font-size: 10px;
+  width: 530px;
+  text-align: center;
+}
+.imgFooter {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  text-align: left;
+}
+/* FIN DISEÑO DEL FOOTER */
+/* INICIO DISEÑO DE SUBMENU DEL SITIO WEB */
+.dropdown-menu {
+  border: 2px solid rgb(28, 177, 170);
+  background-image: linear-gradient(
+    to top,
+    #ed89c2,
+    #e5a1d9,
+    #deb7e9,
+    #dcccf3,
+    #e0def7,
+    #e6e5f7,
+    #ecebf6,
+    #f2f2f6,
+    #f2f1f6,
+    #f3eff6,
+    #f5eef5,
+    #f7ecf3
+  );
+}
+/* FIN DISEÑO DE SUBMENU DEL SITIO WEB */
+/* INICIO DISEÑO DE IMAGENES DE TIENDAS */
+.imgTienda {
+  width: 300px;
+  height: 200px;
+  border-radius: 4px;
+}
+.btn-primary {
+  background-color: rgb(54, 162, 157);
+  color: black;
+}
+.btn-primary:hover {
+  background-color: black;
+  color: rgb(54, 162, 157);
+}
+/* FIN DISEÑO DE IMAGENES DE TIENDAS */
+/* INICIO DISEÑO DE IMAGENES CATALOGOS PRODUCTOS VARIOS */
+/*  TARJETAS */
+.tarjetaN {
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px rgba(0.5, 0.5, 0.5, 0.5);
+  margin: 10px;
+  width: 250px;
+  height: 400px;
+}
+
+.imgCat {
+  border-radius: 4px;
+  border-color: black;
+  border-style: dotted;
+}
+.imgCat:hover {
+  box-shadow: inset 5px 5px 50px rgb(227, 184, 219),
+    10px 10px 1px 3px rgb(176, 160, 173), 5px 5px 50px rgb(255, 0, 174),
+    5px 5px 50px rgb(96, 210, 223);
+}
+/* FIN DISEÑO DE IMAGENES CATALOGOS PRODUCTOS VARIOS */
+/* INICIO DISEÑO DE FORMULARIO DE CONTACTO */
+.dataForm {
+  width: 800px;
+  height: 500px;
+  border-color: 4px #e72fa0 solid;
+  border-radius: 3px;
+}
+/* FIN DISEÑO DE FORMULARIO DE CONTACTO */
