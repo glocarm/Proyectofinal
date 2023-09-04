@@ -13,6 +13,9 @@ const postUsuarioRouter=require('./routes/postUsuarioRouter');
 const getUsuRouter=require('./routes/getUsuRouter');
 const deleteArtRouter=require('./routes/deleteArtRouter');
 const deleteUsuRouter=require('./routes/deleteUsuRouter');
+const getDataApiRouter=require('./routes/getDataApiRouter');
+const getArtApiRouter=require('./routes/getArtApiRouter'); 
+
 
 const server=express();
 server.use(express.json())
@@ -44,6 +47,8 @@ server.use('/', updateArtRouter);
 server.use('/', updateUsuRouter);
 server.use('/', deleteArtRouter);
 server.use('/', deleteUsuRouter);
+server.use('/', getDataApiRouter);
+server.use('/', getArtApiRouter);
 
 server.listen(5050, ()=>{
     console.log('Servidor corriendo correctamente en localhost 5050')

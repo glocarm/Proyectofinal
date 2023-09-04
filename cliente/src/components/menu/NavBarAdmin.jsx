@@ -49,6 +49,16 @@ const NavBarAdmin = () => {
                     </li>
                     <li className="nav-item">
                       <Link
+                        to={"/CatalogOtrosart"}
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#"
+                      >
+                        Mas Articulos..
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
                         to={"/Home"}
                         className="nav-link active"
                         aria-current="page"

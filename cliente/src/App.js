@@ -14,6 +14,8 @@ import ListadoUsu from "./components/Usuarios/ListadoUsu";
 import Registrousuario from "./components/Usuarios/Registrousuario";
 import UpdateUsuario from "./components/Usuarios/UpdateUsuario"; 
 import Cerrarsesion from "./components/Usuarios/Cerrarsesion"; 
+import CatalogOtrosart from "./components/catalogo/CatalogOtrosart";
+import CatalogoDataApi from "./components/catalogo/CatalogOtrosart";
 function App() {
   return (
     <div className="App">
@@ -31,6 +33,9 @@ function App() {
           <Route path="/RegistrarUsu" element={<Registrousuario />} /> 
           <Route path="/ModificarArt/:id" element={<UpdateArt />} /> 
           <Route path="/ModificarUsu/:id" element={<UpdateUsuario />} /> 
+          <Route path="/CatalogOtrosart" element={<CatalogOtrosart />} /> 
+          <Route path="/CatalogoDataApi" element={<CatalogOtrosart />} /> 
+          
         </Routes>
       </Router>
     </div>
