@@ -71,4 +71,4 @@ const validarJWT= async(req, res, next)=>{
 
 
 
-module.exports = { validainfo , ArticuloporNombre, ArticuloporCod, EmailUsulogin, UsuarioEmail, ExisteUsuarioporId, validarJWT};
+module.exports = {  ArticuloporNombre, ArticuloporCod, EmailUsulogin, UsuarioEmail, ExisteUsuarioporId, validarJWT};
