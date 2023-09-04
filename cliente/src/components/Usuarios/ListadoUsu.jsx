@@ -28,7 +28,7 @@ function ListadoUsu() {
   };
 
   return (
-    <div className="container">
+    <div className="container bodyHome">
       <NavBarAdmin />
       <h1>Listado de Usuarios</h1>
       <div className="ListarUsu">

@@ -4,6 +4,6 @@ const updateUsuController =require('../controllers/updateUsuController');
 const {validainfo ,validarJWT}=require('../middlewares/validainicio');
 
 const updateUsuRouter = Router();
-updateUsuRouter.patch('/ModificarUsu/:id', validarJWT, updateUsuController.patch); 
+updateUsuRouter.patch('/ModificarUsu/:id', updateUsuController.patch); 
 
 module.exports = updateUsuRouter;

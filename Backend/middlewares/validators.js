@@ -3,6 +3,13 @@ const Articulo = require("../models/SchemaArticulo");
 const Usuario =require("../models/SchemaUsuario");
 const jwt=require("jsonwebtoken");
 
+const validainfo =( req , res, next)=>{
+    const error = validationResult(req);
+    if(!error.isEmpty()){
+        return res.status(400).json({errores: error.array()});
+    }
+    next();
+}
 
 const UsuarioEmail= async (Email)=>{
     const usuario=await Usuario.findOne({ Email});
@@ -71,4 +78,4 @@ const validarJWT= async(req, res, next)=>{
 
 
 
-module.exports = {  ArticuloporNombre, ArticuloporCod, EmailUsulogin, UsuarioEmail, ExisteUsuarioporId, validarJWT};
+module.exports = { validainfo , ArticuloporNombre, ArticuloporCod, EmailUsulogin, UsuarioEmail, ExisteUsuarioporId, validarJWT};
