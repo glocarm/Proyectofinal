@@ -29,6 +29,16 @@ const NavBarUsuario = () => {
                     </li>
                     <li className="nav-item">
                       <Link
+                        to={"/CatalogOtrosartUsu"}
+                        className="nav-link active"
+                        aria-current="page"
+                        href="#"
+                      >
+                        Mas Articulos..
+                      </Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link
                         to={"/"}
                         className="nav-link active"
                         aria-current="page"

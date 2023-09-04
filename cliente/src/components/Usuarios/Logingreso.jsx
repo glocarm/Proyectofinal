@@ -22,13 +22,18 @@ const Logingreso = () => {
         Email,
         Password,
       });
-      console.log(response.data);
+      console.log(response.data.usuario.TipoUsuario);
       if (response.data.token) {
         localStorage.setItem(
           "token",
           JSON.stringify({ token: response.data.token })
         );
-        navigate("/HomeAdmin");
+        if (response.data.usuario.TipoUsuario==="ADMIN-ROLE") {
+           navigate("/HomeAdmin");
+        } else{
+            navigate("/HomeUsu");
+        }
+       
       }
     } catch (error) {
       console.log(error.response);

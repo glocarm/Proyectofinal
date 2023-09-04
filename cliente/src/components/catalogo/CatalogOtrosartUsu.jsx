@@ -2,12 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { Link , useNavigate } from "react-router-dom";
 import axios from "axios";
-import NavBarAdmin from '../menu/NavBarAdmin';
+import NavBarUsuario from '../menu/NavBarUsuario';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/css/App.css";
 
 
-function CatalogOtrosart() {  
+function CatalogOtrosartUsu() {  
     const [ data , setData] = useState ([]);
     const [ datapi , setDatapi] = useState ([]);
     const Navegar = useNavigate()
@@ -42,7 +42,7 @@ function CatalogOtrosart() {
     } */
 return (
 <div className="container bodyHome">
-{/* <NavBarAdmin /> */}
+ <NavBarUsuario /> 
 
      <h2>Catalogo de Otros Articulos (API)</h2>
     <div> 
@@ -72,4 +72,4 @@ return (
 </div>
 );
 }
-export default CatalogOtrosart;
+export default CatalogOtrosartUsu;
