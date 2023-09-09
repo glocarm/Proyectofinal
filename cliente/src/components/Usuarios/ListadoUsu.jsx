@@ -20,48 +20,54 @@ function ListadoUsu() {
   };
 
   const eliminarUsu = async (idusu) => {
-    axios.delete('http://localhost:5050/EliminarUsu/'+idusu).then((res) => {
+    axios
+      .delete("http://localhost:5050/EliminarUsu/" + idusu)
+      .then((res) => {
         console.log(res.data);
         alert("Usuario deshabilitado");
         Navegar(0);
-      }).catch((error) => console.log(error));
+      })
+      .catch((error) => console.log(error));
   };
 
   return (
     <div className="container bodyHome">
       <NavBarAdmin />
-      <h1>Listado de Usuarios</h1>
-      <div className="ListarUsu">
-        <table >
+      <h3>Listado de Usuario</h3>
+      <div>
+        <table className="table">
           <thead>
             <tr>
-              <td>Nombre</td>
-              <td>Apellido</td>
-              <td>Tipo Usuario</td>
-              <td>Email</td>
-              <td>Acciones</td>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Tipo Usuario</th>
+              <th>Email</th>
+              <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
-            <div>
-              {data.map((item) => (
-                // <div key={item._id}>
-                  <div className="col" key={item._id + 2}>
-                    <tr>
-                      <td>{item.Nombre}</td>
-                      <td>{item.Apellido}</td>
-                      <td>{item.TipoUsuario}</td>
-                      <td>{item.Email}</td>
-                      <td><div className="cardbottom">
-                          <Link to={`/ModificarUsu/${item._id}`}><li className="btn cardbottom">Editar</li></Link> 
-                          <button className="btn  cardbottom" onClick={()=>{eliminarUsu(item._id)}}>Borrar</button>
-                          </div> 
-                      </td>
-                    </tr>
-                  </div>
-                // </div>
-              ))}
-            </div>
+            {data.map((item) => (
+              <tr>
+                <td>{item.Nombre}</td>
+                <td>{item.Apellido}</td>
+                <td>{item.TipoUsuario}</td>
+                <td>{item.Email}</td>
+                <td>
+                  <Link to={`/ModificarUsu/${item._id}`}>
+                    <li className="btn">Editar</li>
+                  </Link>
+                  <button
+                    className="btn "
+                    onClick={() => {
+                      eliminarUsu(item._id);
+                    }}
+                  >
+                    Borrar
+                  </button>
+                </td>
+              </tr>
+              // </div>
+            ))}
           </tbody>
         </table>
       </div>

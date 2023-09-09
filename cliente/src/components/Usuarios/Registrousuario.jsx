@@ -2,7 +2,6 @@
 import "../../assets/css/App.css";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import NavBarAdmin from "../menu/NavBarAdmin";
 import NavBarHomeIng from "../menu/NavBarHomeIng";
 import axios from "axios";
 
@@ -100,7 +99,7 @@ function Registrousuario() {
                 </label>
                 <input
                   className="inputContacto"
-                  type="text"
+                  type="password"
                   id="Password"
                   value={Password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -115,7 +114,7 @@ function Registrousuario() {
                   className="inputContacto"
                   type="text"
                   id="EstUsuario"
-                  value={EstUsuario}
+                  value="ACTIVO"
                   onChange={(e) => setEstUsuario(e.target.value)}
                   required
                 />

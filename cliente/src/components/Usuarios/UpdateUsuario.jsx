@@ -5,15 +5,13 @@ import { useEffect } from "react";
 import axios from "axios";
 import NavBarAdmin from "../menu/NavBarAdmin";
 
-
 function UpdateUsuario() {
   const params = useParams();
   const [Nombre, setNombre] = useState("");
   const [Apellido, setApellido] = useState("");
-//   const [TipoUsuario, setTipoUsuario] = useState("");
+  const [TipoUsuario, setTipoUsuario] = useState("");
   const [Email, setEmail] = useState("");
   const [Password, setPassword] = useState("");
-//   const [EstUsuario, setEstUsuario] = useState("");
   const navegar = useNavigate();
 
   useEffect(() => {
@@ -21,26 +19,26 @@ function UpdateUsuario() {
       .patch("http://localhost:5050/ModificarUsu/" + params.id)
       .then((res) => {
         let dataUsuario = res.data;
-        // console.log('Data del articulo',dataArticulo.data.name)
         setNombre(dataUsuario.data.Nombre);
         setApellido(dataUsuario.data.Apellido);
-        // setTipoUsuario(dataUsuario.data.TipoUsuario);
+        setTipoUsuario(dataUsuario.data.TipoUsuario);
         setEmail(dataUsuario.data.Email);
         setPassword(dataUsuario.data.Password);
-        // setEstUsuario(dataUsuario.data.EstUsuario);
       });
   }, {});
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value);
+  };
 
   function editarusuario() {
     const usuariomodif = {
         Nombre :Nombre,
         Apellido:Apellido,
-        // TipoUsuario:TipoUsuario,
+        TipoUsuario:TipoUsuario,
         Email:Email,
         Password:Password,
-        // EstUsuario: EstUsuario,
+       
     }
-
     axios
       .patch("http://localhost:5050/ModificarUsu/" + params.id, usuariomodif)
       .then((res) => {
@@ -49,7 +47,6 @@ function UpdateUsuario() {
         navegar("/")
       })
   }
-
   return (
     <div className="container bodyPage">
      <NavBarAdmin /> 
@@ -87,6 +84,20 @@ function UpdateUsuario() {
                 />
               </div>
               <div>
+                <label className="labelContacto" htmlFor="TipoUsuario">
+                  Tipo Usuario:
+                </label>
+                <input
+                  className="inputContacto"
+                  type="text"
+                  id="TipoUsuario"
+                  placeholder="ADMIN-ROLE /  USER-ROLE"
+                  value={TipoUsuario}
+                  onChange={(e) => setTipoUsuario(e.target.value)}
+                  required
+                />
+              </div>
+              <div>
                 <label className="labelContacto" htmlFor="Email">
                   Email:
                 </label>
@@ -105,14 +116,14 @@ function UpdateUsuario() {
                 </label>
                 <input
                   className="inputContacto"
-                  type="text"
+                  type="Password"
                   id="Password"
                   value={Password}
-                  onChange={(e) => setPassword(e.target.value)}
+                  onChange={handlePasswordChange}
                   required
                 />
               </div> 
-              <button onClick={editarusuario} >
+              <button  onClick={editarusuario} >
                 Guardar Modificación
               </button>
             </form>

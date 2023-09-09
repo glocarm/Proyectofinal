@@ -81,11 +81,6 @@ function RegistrarArt() {
                   onChange={(e) => setTipoArticulo(e.target.value)}
                   required
                 />
-                {/*  <select className="dropdown-menu" name="TipoArticulo" id="lang">
-                <option value={TipoArticulo}>Dije</option>
-                <option value={TipoArticulo}>Anillo</option>
-                <option value={TipoArticulo}>Collar</option>
-              </select> */}
               </div>
               <div>
                 <label className="labelContacto" htmlFor="StockArticulo">
@@ -136,7 +131,7 @@ function RegistrarArt() {
                   className="inputContacto"
                   type="text"
                   id="EstArticulo"
-                  value={EstArticulo}
+                  value="ACTIVO"
                   onChange={(e) => setEstArticulo(e.target.value)}
                   required
                 />

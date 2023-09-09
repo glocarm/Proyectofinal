@@ -17,12 +17,13 @@ import Cerrarsesion from "./components/Usuarios/Cerrarsesion";
 import CatalogOtrosart from "./components/catalogo/CatalogOtrosart";
 import CatalogoDataApi from "./components/catalogo/CatalogOtrosart";
 import CatalogOtrosartUsu from "./components/catalogo/CatalogOtrosartUsu";
+
 function App() {
   return (
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/Home" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/login" element={<Logingreso />} />
           <Route path="/Homeusu" element={<Homeusu />} />
           <Route path="/HomeAdmin" element={<HomeAdmin />} />

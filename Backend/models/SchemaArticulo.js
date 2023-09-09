@@ -24,9 +24,9 @@ const SchemaArticulo=new Schema ({
     ImagenArticulo: { //Imagenes del articulo
         type: String
     },
-    EstArticulo: { //Estado del articulo en el Inventario, true se comercializa false no se comercializa
-        type: Boolean,
-        default: true
+    EstArticulo: { //Estado del articulo en el Inventario, ACTIVO o NO ACTIVO se comercializa false no se comercializa
+        type: String,
+        default: "ACTIVO"
     },
 });
 

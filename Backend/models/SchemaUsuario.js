@@ -22,8 +22,8 @@ const SchemaUsuario=new Schema ({
         required: [ true, 'Password del Usuario es obligatorio']
     },
     EstUsuario: { //Estado del Usuario 
-        type: Boolean,
-        default: true
+        type: String,
+        default: "ACTIVO"
     },
 });
 

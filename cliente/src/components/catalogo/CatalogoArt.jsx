@@ -6,6 +6,7 @@ import NavBarAdmin from '../menu/NavBarAdmin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/css/App.css";
 
+//CATALOGO PARA USUARIOS TIPO ADMIN-ROLE
 
 function CatalogoArt() {  
     const [ data , setData] = useState ([]);
@@ -16,7 +17,6 @@ function CatalogoArt() {
 
     const mostrarArt = async ()=>{  
         const art = ( await axios.get("http://localhost:5050/CatalogoArt")).data; 
-        console.log(art);
         setData(art);
     }
 
@@ -31,24 +31,22 @@ return (
 <div className="container bodyHome">
 <NavBarAdmin />
     <h2>Catalogo de Articulos</h2>
-    <div> 
+    <div className="container"> 
         {data.map ((item) => {
             return (
                 <div className="cardart" key={item._id+1}>
-                    <div className="row" key={item._id+2}>
+                    <div  key={item._id+2}>
                         <div key={item._id} className="col-sm-6 offset-3">
-                            <p><img src={item.ImagenArticulo} alt={item.NombArticulo} width="200px" className="imgCat" /></p>
+                            <p><img src={item.ImagenArticulo} alt={item.NombArticulo} className="imgCat"/></p>
                             <p className="txtcardart">Nombre : {item.NombArticulo}</p>
                             <p className="txtcardart">Tipo  : {item.TipoArticulo}</p>
                             <p className="txtcardart">Cantidad  : {item.StockArticulo}</p>
                             <p className="txtcardart">Precio  : {item.PrecioArticulo}</p>
                              {/* http://localhost:3000/img/zarc1.jepg  */}
-                             <buttonGroup>
-                            <div className="cardbottom">
+                                <div className="cardbottom">
                                 <Link to={`/ModificarArt/${item._id}`}><li className="btn cardbottom">Editar</li></Link> 
                                 <button className="btn  cardbottom" onClick={()=>{eliminarArt(item._id )}}>Borrar</button>
-                            </div> 
-                            </buttonGroup>
+                                </div> 
                         </div>                           
                     </div>
                     </div>

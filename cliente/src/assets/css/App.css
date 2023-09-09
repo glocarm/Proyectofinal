@@ -6,8 +6,9 @@
 }
 /* INICIO DISEÑO DEL HOME */
 .bodyHome {
-  overflow: hidden;
-  height: 100vh;
+  /* overflow: hidden; */
+  /* height: 100vh; */
+ 
   background-image: linear-gradient(
     to left,
     #7cdfec,
@@ -166,7 +167,7 @@ footer {
 /* INICIO DISEÑO DE IMAGENES CATALOGOS PRODUCTOS VARIOS */
 /*  TARJETAS */
 .cardart {
-  display: inline-block;
+  display:inline-block;
   background-color: #ffffff;
   background: linear-gradient(to right, rgb(134, 206, 228), rgb(235, 213, 233));
   border-radius: 1em;
@@ -175,6 +176,7 @@ footer {
   width: 350px;
   height: 450px;
   overflow: hidden;
+  align-items: center;
 }
 
 .imgCat {
@@ -185,14 +187,12 @@ footer {
   /* object-fit: cover; */
   border-radius: 10px 10px 10px 10px;
   border-color: rgb(145, 17, 117);
-  
 }
-/* .imgCat:hover {
+ .imgCat:hover {
   box-shadow: inset 5px 5px 50px rgb(227, 184, 219),
     10px 10px 1px 3px rgb(176, 160, 173), 5px 5px 50px rgb(255, 0, 174),
     5px 5px 50px rgb(96, 210, 223);
 }
- */
 .cardart:hover {
   box-shadow: inset 5px 5px 50px rgb(227, 184, 219),
   10px 10px 1px 3px rgb(176, 160, 173), 5px 5px 50px rgb(255, 0, 174),
@@ -204,16 +204,24 @@ footer {
 
 .txtcardart {
    text-align: left;
-   /* font-weight:bold; */
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   font-weight:bold; 
+   font-size: 13px;
 }
 
 .cardbottom {
-  display: "flex";
+  display: flex;
+  margin-top: 2px;
   justify-items: justify;
-  background-color:#e423c4;
-  color:black;
-  border-color: #50b9c7;
-  border-radius: 10px;
+  background-color: #2cacbd;
+  color:rgb(248, 243, 243);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  justify-content: space-between;
+  padding: 5px 10px;
+  font-size: 15px;
+  font-family: inherit;
 }
 
 
@@ -354,3 +362,45 @@ footer {
   background-position: center;
   background-repeat: no-repeat;
 } 
+
+
+
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+.table th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* 
+ .pagionacion{
+  list-style-type: none;
+  display: flex;
+  gap: 16px;
+  padding: 0px;
+ }
+ .paginacion a{
+  display:block;
+  color : var(--primary);
+  font-size: 1.3rem;
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 12px 16px;
+ }
+ .paginacion a:hover, a.active{
+  background-color: var(--odd-row);
+  text-decoration: underline;
+ } */

@@ -11,7 +11,7 @@ exports.post= async ( req , res) => {
         StockArticulo , 
         PrecioArticulo , 
         ImagenArticulo , 
-        EstArticulo
+        EstArticulo :"ACTIVO"
       });
       res.status(201).json({ status: "success", data:NewArticulo});
     } catch (error){

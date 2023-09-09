@@ -5,6 +5,6 @@ const deleteArtControllers =require('../controllers/deleteArtControllers');
 
 
 const deleteArtRouter = Router();
-deleteArtRouter.delete('/EliminarArt/:id',  deleteArtControllers.delete); 
+deleteArtRouter.patch('/EliminarArt/:id',  deleteArtControllers.patch); 
 
 module.exports = deleteArtRouter;

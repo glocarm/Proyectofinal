@@ -6,6 +6,7 @@ import NavBarAdmin from '../menu/NavBarAdmin';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/css/App.css";
 
+//CATALOGO OTROS ARTICULOS PARA USUARIOS TIPO ADMIN-ROLE
 
 function CatalogOtrosart() {  
     const [ data , setData] = useState ([]);
@@ -33,16 +34,16 @@ function CatalogOtrosart() {
         setData(resapi);
     }
 
-    /* const eliminarArt =async (idArt , token)=>{    
+    const eliminarArt =async (idArt , token)=>{    
         await axios.delete('http://localhost:5050/EliminarArt/'+idArt).then(res=>{
             console.log(res.data);
             alert('Articulo desactivado')
             Navegar(0)
         }).catch(error=>console.log(error))
-    } */
+    } 
 return (
 <div className="container bodyHome">
-{/* <NavBarAdmin /> */}
+<NavBarAdmin /> 
 
      <h2>Catalogo de Otros Articulos (API)</h2>
     <div> 
@@ -56,14 +57,7 @@ return (
                             <p className="txtcardart">Categoria  : {item.category.name}</p>
                             <p className="txtcardart">Precio  : {item.price}</p>
                              {/* http://localhost:3000/img/zarc1.jepg   */}  
-                        </div>       
-                         {/*<buttonGroup>
-                            <div className="cardbottom">
-                                <Link to={`/ModificarArt/${item._id}`}><li className="btn cardbottom">Editar</li></Link>  
-                                <button className="btn  cardbottom" onClick={()=>{eliminarArt(item._id )}}>Borrar</button>
-                            </div> 
-                            </buttonGroup>*/}
-                                           
+                        </div>                           
                     </div>
                     </div>
             );

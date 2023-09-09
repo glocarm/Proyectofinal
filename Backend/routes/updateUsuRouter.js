@@ -1,4 +1,5 @@
 const { Router } = require("express");
+
 const { check } = require("express-validator");
 const updateUsuController =require('../controllers/updateUsuController');
 const {validainfo ,validarJWT}=require('../middlewares/validainicio');

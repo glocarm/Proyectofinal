@@ -23,7 +23,7 @@ exports.get= async ( _, res) => {
  
 exports.getDB = async ( _, res) => {
 try {
-    const dbArticulos= await Articulo.find()
+    const dbArticulos= await Articulo.find({ EstArticulo: "ACTIVO" })
     res.status(200).send(dbArticulos);
   } catch (error){
     res.status(404).send(error);

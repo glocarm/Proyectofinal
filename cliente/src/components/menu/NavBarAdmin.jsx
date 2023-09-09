@@ -59,12 +59,12 @@ const NavBarAdmin = () => {
                     </li>
                     <li className="nav-item">
                       <Link
-                        to={"/Home"}
+                        to={"/"}
                         className="nav-link active"
                         aria-current="page"
                         href="#"
                       >
-                        Cerrar sesión
+                        Salir
                       </Link>
                     </li>
                   </ul>

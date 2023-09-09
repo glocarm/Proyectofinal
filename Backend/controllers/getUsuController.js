@@ -22,7 +22,7 @@ exports.get= async ( _, res) => {
  
 exports.getDB = async ( _, res) => {
 try {
-    const dbUsuario= await Usuario.find()
+    const dbUsuario= await Usuario.find({EstUsuario: "ACTIVO"})
     res.status(200).send(dbUsuario);
   } catch (error){
     res.status(404).send(error);

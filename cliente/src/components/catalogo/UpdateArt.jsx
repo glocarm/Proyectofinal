@@ -99,11 +99,6 @@ function UpdateArt() {
                   onChange={(e) => setTipoArticulo(e.target.value)}
                   required
                 />
-                {/*  <select className="dropdown-menu" name="TipoArticulo" id="lang">
-                <option value={TipoArticulo}>Dije</option>
-                <option value={TipoArticulo}>Anillo</option>
-                <option value={TipoArticulo}>Collar</option>
-              </select> */}
               </div>
               <div>
                 <label className="labelContacto" htmlFor="StockArticulo">

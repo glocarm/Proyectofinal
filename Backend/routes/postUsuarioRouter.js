@@ -11,3 +11,5 @@ postUsuarioRouter.post('/RegistrarUsu',
 ], postUsuController.post); 
 
 module.exports = postUsuarioRouter;
+
+//****  Validaciones me dan Error en el front, pero con ThunderClient muestra las validaciones correctamente

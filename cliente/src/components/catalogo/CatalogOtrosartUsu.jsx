@@ -6,6 +6,7 @@ import NavBarUsuario from '../menu/NavBarUsuario';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../../assets/css/App.css";
 
+//CATALOGO OTROS ARTICULOS PARA USUARIOS TIPO USER-ROLE
 
 function CatalogOtrosartUsu() {  
     const [ data , setData] = useState ([]);
@@ -32,14 +33,6 @@ function CatalogOtrosartUsu() {
         // console.log(resapi);
         setData(resapi);
     }
-
-    /* const eliminarArt =async (idArt , token)=>{    
-        await axios.delete('http://localhost:5050/EliminarArt/'+idArt).then(res=>{
-            console.log(res.data);
-            alert('Articulo desactivado')
-            Navegar(0)
-        }).catch(error=>console.log(error))
-    } */
 return (
 <div className="container bodyHome">
  <NavBarUsuario /> 
@@ -56,14 +49,7 @@ return (
                             <p className="txtcardart">Categoria  : {item.category.name}</p>
                             <p className="txtcardart">Precio  : {item.price}</p>
                              {/* http://localhost:3000/img/zarc1.jepg   */}  
-                        </div>       
-                         {/*<buttonGroup>
-                            <div className="cardbottom">
-                                <Link to={`/ModificarArt/${item._id}`}><li className="btn cardbottom">Editar</li></Link>  
-                                <button className="btn  cardbottom" onClick={()=>{eliminarArt(item._id )}}>Borrar</button>
-                            </div> 
-                            </buttonGroup>*/}
-                                           
+                        </div>                          
                     </div>
                     </div>
             );

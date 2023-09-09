@@ -12,4 +12,3 @@ exports.patch= async ( req , res) => {
     }
 } ;
  
-//http://localhost:5050/Modificar/64d9c1b23c1ae58c1811bac0

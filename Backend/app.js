@@ -50,6 +50,7 @@ server.use('/', deleteUsuRouter);
 server.use('/', getDataApiRouter);
 server.use('/', getArtApiRouter);
 
+
 server.listen(5050, ()=>{
     console.log('Servidor corriendo correctamente en localhost 5050')
 })
