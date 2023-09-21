@@ -15,7 +15,7 @@ function CatalogoArtUsu() {
   }, [setData]);
 
   const mostrarArt = async () => {
-    const art = (await axios.get("http://localhost:5050/CatalogoArtUsu")).data;
+    const art = (await axios.get("https://proyectobf.onrender.com/CatalogoArtUsu")).data;
     console.log(art);
     setData(art);
   };

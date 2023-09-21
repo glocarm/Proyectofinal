@@ -19,7 +19,7 @@ function UpdateArt() {
 
   useEffect(() => {
     axios
-      .patch('http://localhost:5050/ModificarArt/' + params.id)
+      .patch('https://proyectobf.onrender.com/ModificarArt/' + params.id)
       .then((res) => {
         let dataArticulo = res.data;
         setCodArticulo(dataArticulo.data.CodArticulo);
@@ -43,7 +43,7 @@ function UpdateArt() {
       EstArticulo: EstArticulo,
     };
     axios
-      .patch("http://localhost:5050/ModificarArt/" + params.id , articulomodif)
+      .patch("https://proyectobf.onrender.com/ModificarArt/" + params.id , articulomodif)
       .then((res) => {
         console.log(res.data)
         alert("Articulo Actualizado con éxito")

@@ -23,19 +23,19 @@ function CatalogOtrosart() {
     }, [setData]);
 
     const guardaDataApi = async ()=>{  
-      const api = ( await axios.post("http://localhost:5050/CatalogOtrosart")).data; 
+      const api = ( await axios.post("https://proyectobf.onrender.com/CatalogOtrosart")).data; 
     //   console.log(api);
       setDatapi(api);
   }
 
     const mostrarArtApi = async ()=>{  
-        const resapi = ( await axios.get("http://localhost:5050/CatalogoDataApi")).data; 
+        const resapi = ( await axios.get("https://proyectobf.onrender.com/CatalogoDataApi")).data; 
         // console.log(resapi);
         setData(resapi);
     }
 
     const eliminarArt =async (idArt , token)=>{    
-        await axios.delete('http://localhost:5050/EliminarArt/'+idArt).then(res=>{
+        await axios.delete('https://proyectobf.onrender.com/EliminarArt/'+idArt).then(res=>{
             console.log(res.data);
             alert('Articulo desactivado')
             Navegar(0)

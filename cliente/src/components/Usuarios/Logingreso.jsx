@@ -18,7 +18,7 @@ const Logingreso = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:5050/login", {
+      const response = await axios.post("https://proyectobf.onrender.com/login", {
         Email,
         Password,
       });

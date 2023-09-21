@@ -40,7 +40,7 @@ function UpdateUsuario() {
        
     }
     axios
-      .patch("http://localhost:5050/ModificarUsu/" + params.id, usuariomodif)
+      .patch("https://proyectobf.onrender.com/ModificarUsu/" + params.id, usuariomodif)
       .then((res) => {
         console.log(res.data)
         alert("Usuario Actualizado con éxito")

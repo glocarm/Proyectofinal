@@ -14,14 +14,14 @@ function ListadoUsu() {
   }, [setData]);
 
   const mostrarUsuarios = async () => {
-    const usu = (await axios.get("http://localhost:5050/ListadoUsu")).data;
+    const usu = (await axios.get("https://proyectobf.onrender.com/ListadoUsu")).data;
     console.log(usu);
     setData(usu);
   };
 
   const eliminarUsu = async (idusu) => {
     axios
-      .delete("http://localhost:5050/EliminarUsu/" + idusu)
+      .delete("https://proyectobf.onrender.com/EliminarUsu/" + idusu)
       .then((res) => {
         console.log(res.data);
         alert("Usuario deshabilitado");

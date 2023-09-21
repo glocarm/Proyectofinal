@@ -25,7 +25,7 @@ function RegistrarArt() {
       EstArticulo: EstArticulo,
     };
     axios
-      .post("http://localhost:5050/RegistrarArt", newArt)
+      .post("https://proyectobf.onrender.com/RegistrarArt", newArt)
       .then((res) => console.log(res.data))
       .then((error) => console.log(error));
     alert("Desea Registrar el Articulo?");  //revisar este mensaje ..siempre aparece.

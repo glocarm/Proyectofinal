@@ -23,7 +23,7 @@ function Registrousuario() {
       EstUsuario: EstUsuario,
     };
     axios
-      .post("http://localhost:5050/RegistrarUsu", newusu)
+      .post("https://proyectobf.onrender.com/RegistrarUsu", newusu)
       .then((res) => console.log(res.data))
       .then((error) => console.log(error));
     alert("Usuario registrado con Exito");

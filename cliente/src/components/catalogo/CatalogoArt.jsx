@@ -16,12 +16,15 @@ function CatalogoArt() {
     }, [setData]);
 
     const mostrarArt = async ()=>{  
-        const art = ( await axios.get("http://localhost:5050/CatalogoArt")).data; 
+        // const art = ( await axios.get("http://localhost:5050/CatalogoArt")).data; 
+        const art = ( await axios.get("https://proyectobf.onrender.com/CatalogoArt")).data; 
+        
         setData(art);
     }
 
     const eliminarArt =async (idArt , token)=>{    
-        await axios.delete('http://localhost:5050/EliminarArt/'+idArt).then(res=>{
+        // await axios.delete('http://localhost:5050/EliminarArt/'+idArt).then(res=>
+        await axios.delete('https://proyectobf.onrender.com/EliminarArt/'+idArt).then(res=>{
             console.log(res.data);
             alert('Articulo desactivado')
             Navegar(0)
